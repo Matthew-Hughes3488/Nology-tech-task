@@ -17,12 +17,16 @@
       <h1>PokéDom- gotta code 'em all!</h1>
 
       <section class="filter-bar">
-        <label for="filter">Chose what to filter by</label>
+        <label for="filter">Choose what to filter by</label>
         <select name="filter" id="filter">
           <option value="name">Name</option>
           <option value="type">Type</option>
         </select>
         <input class="filter-input" type="text" />
+        <div>
+          <label for="number-of-results">Choose the number of results you would like to see</label>
+          <input id="number-of-results" type="number"/>
+        </div>
       </section>
 
       <main class="card-container"></main>
