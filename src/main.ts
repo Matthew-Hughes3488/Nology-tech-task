@@ -7,9 +7,7 @@ let maxNumberOfCards: number = 151;
 const cardContainer = document.querySelector(".card-container");
 const filterType = document.querySelector("#filter") as HTMLSelectElement;
 const filterInput = document.querySelector(".filter-input") as HTMLInputElement;
-const numberOfResultsInput = document.querySelector(
-  "#number-of-results"
-) as HTMLInputElement;
+const numberOfResultsInput = document.querySelector("#number-of-results") as HTMLInputElement;
 if (!cardContainer || !filterInput || !filterType || !numberOfResultsInput)
   throw new Error("Query error");
 
