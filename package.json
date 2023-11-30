@@ -1,5 +1,7 @@
 {
   "name": "pokedom-ts",
+  "homepage": "https://Matthew-Hughes3488.github.io/nology-tech-task",
+  "author": "matthew-hughes",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +11,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.0",
+    "sass": "^1.64.2",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5",
-    "sass": "^1.64.2"
+    "vite": "^4.4.5"
   }
 }
