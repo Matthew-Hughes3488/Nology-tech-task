@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,8 +14,19 @@
   </head>
   <body>
     <body>
-    <h1>PokéDom- gotta code 'em all!</h1>
-    <main class="card-container"></main>
-    <script type="module" src="/src/main.ts"></script>
+      <h1>PokéDom- gotta code 'em all!</h1>
+      
+      <section class="filter-bar">
+        <label for="filter">Chose what to filter by</label>
+        <select name="filter" id="filter">
+          <option value="name">Name</option>
+          <option value="type">Type</option>
+        </select>
+        <input type="text" />
+      </section>
+
+      <main class="card-container"></main>
+      <script type="module" src="/src/main.ts"></script>
+    </body>
   </body>
 </html>

@@ -17,7 +17,7 @@ const addPokemonCard = (pokemon : Pokemon) => {
     </div>`
 }
 
-pokemonArray.forEach(pokemon =>{
-    addPokemonCard(pokemon);
-})
+//pokemonArray.forEach(pokemon =>{
+//    addPokemonCard(pokemon);
+//})
 
