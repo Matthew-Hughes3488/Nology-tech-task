@@ -23,34 +23,34 @@ const addPokemonCard = (pokemon: Pokemon) => {
         <div class="card__content">
             <h1 class="card__heading">${pokemon.name}</h1>
             <p class="card__text">
-            ${pokemon.name} (${pokemon.id}) is a ${pokemon.types} type pokemon.
+            ${pokemon.name} (#${pokemon.id}) is a ${pokemon.types.join(" & ")} type pokemon.
             </p>
         </div>
     </div>`;
 };
 
-const filterByName = (filterValue: string) => {
+const filterByName = (value: string) => {
   pokemonArray.forEach((pokemon) => {
-    if (pokemon.name.includes(filterValue)) addPokemonCard(pokemon);
+    if (pokemon.name.includes(value)) addPokemonCard(pokemon);
   });
 };
 
-const filterByType = (filterValue: string) => {
+const filterByType = (value: string) => {
   pokemonArray.forEach((pokemon) => {
-    if (pokemon.types.includes(filterValue)) addPokemonCard(pokemon);
+    if (pokemon.types.includes(value)) addPokemonCard(pokemon);
   });
 };
 
 const handleFilter = () => {
-  const filter = filterInput.value;
+  const filterValue = filterInput.value;
   const filterAtrribute = filterType.value;
 
   removePokemonCards();
 
   if (filterAtrribute === "name") {
-    filterByName(filter);
+    filterByName(filterValue);
   } else if (filterAtrribute === "type") {
-    filterByType(filter);
+    filterByType(filterValue);
   } else resetPokemonCards();
 };
 
