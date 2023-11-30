@@ -2,7 +2,13 @@ import "./styles/style.scss";
 import {pokemonArray} from "./data/pokemon"
 
 const cardContainer = document.querySelector(".card-container");
-if(!cardContainer) throw new Error("Query error");
+const filterType = document.querySelector("#filter") as HTMLSelectElement;
+const filterInput = document.querySelector(".filter-input") as HTMLInputElement;
+if(!cardContainer || !filterInput || !filterType) throw new Error("Query error");
+
+const resetPokemonCards = () =>{
+    cardContainer.innerHTML = ""
+}
 
 const addPokemonCard = (pokemon : Pokemon) => {
     cardContainer.innerHTML += `
@@ -16,6 +22,14 @@ const addPokemonCard = (pokemon : Pokemon) => {
         </div>
     </div>`
 }
+
+const handleFilter = (event: Event) =>{
+    const filterBar = event.target as HTMLInputElement
+    const filter = filterBar.value;
+    
+}
+
+filterInput.addEventListener("input", handleFilter)
 
 //pokemonArray.forEach(pokemon =>{
 //    addPokemonCard(pokemon);
