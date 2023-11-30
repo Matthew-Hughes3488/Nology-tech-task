@@ -51,11 +51,9 @@ const handleFilter = () => {
     filterByName(filter);
   } else if (filterAtrribute === "type") {
     filterByType(filter);
-  }
+  } else resetPokemonCards();
 };
 
 filterInput.addEventListener("input", handleFilter);
 
-//pokemonArray.forEach(pokemon =>{
-//    addPokemonCard(pokemon);
-//})
+resetPokemonCards();
